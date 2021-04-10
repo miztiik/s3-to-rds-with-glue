@@ -78,8 +78,8 @@ applymapping1 = ApplyMapping.apply(
         ("request_id", "string", "request_id", "string"),
         ("category", "string", "category", "string"),
         ("store_id", "int", "store_id", "int"),
-        ("evnt_time", "string", "evnt_time", "string"),
-        ("evnt_type", "string", "evnt_type", "string"),
+        ("ts", "string", "ts", "string"),
+        ("event_type", "string", "event_type", "string"),
         ("sales", "double", "sales", "double"),
         ("sku", "int", "sku", "int"),
         ("gift_wrap", "boolean", "gift_wrap", "boolean"),
@@ -88,7 +88,7 @@ applymapping1 = ApplyMapping.apply(
         ("contact_me", "string", "contact_me", "string"),
         ("is_return", "boolean", "is_return", "boolean"),
         ("bad_msg", "boolean", "bad_msg", "boolean"),
-        ("partition_0", "string", "partition_0", "string"),
+        ("partition_event_type", "string", "partition_event_type", "string"),
         ("dt", "string", "dt", "string")
     ],
     transformation_ctx="applymapping1"
