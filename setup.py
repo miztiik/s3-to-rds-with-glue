@@ -9,17 +9,17 @@ setuptools.setup(
     name="s3_to_rds_with_glue",
     version="0.0.1",
 
-    description="An empty CDK Python app",
+    description="s3-to-rds-with-glue",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
     author="author",
 
-    package_dir={"": "s3_to_rds_with_glue"},
+    package_dir={"": "stacks"},
     packages=setuptools.find_packages(where="s3_to_rds_with_glue"),
 
     install_requires=[
-        "aws-cdk.core==1.96.0",
+        "aws-cdk.core>=1.97.0",
     ],
 
     python_requires=">=3.6",
