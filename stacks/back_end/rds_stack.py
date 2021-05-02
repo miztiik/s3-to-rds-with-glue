@@ -38,11 +38,6 @@ class RdsDatabaseStack(cdk.Stack):
         store_events_db_credentials = _rds.Credentials.from_secret(
             self.rds_secret)
 
-        # Allow ALL PORTS within SG for GLUE Connections to connect
-        # https://docs.aws.amazon.com/glue/latest/dg/connection-defining.html#connection-properties-jdbc
-        # https://docs.aws.amazon.com/glue/latest/dg/setup-vpc-for-glue-access.html
-        # https://docs.amazonaws.cn/en_us/glue/latest/dg/connection-defining.html
-
         # Create Security Group for MySQL Server Instance
         self.my_sql_db_sg = _ec2.SecurityGroup(
             self,

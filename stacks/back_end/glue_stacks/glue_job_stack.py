@@ -30,6 +30,11 @@ class GlueJobStack(cdk.Stack):
 
         # # Create GLUE JDBC Connection for RDS MySQL
 
+        # Allow ALL PORTS within SG for GLUE Connections to connect
+        # https://docs.aws.amazon.com/glue/latest/dg/connection-defining.html#connection-properties-jdbc
+        # https://docs.aws.amazon.com/glue/latest/dg/setup-vpc-for-glue-access.html
+        # https://docs.amazonaws.cn/en_us/glue/latest/dg/connection-defining.html
+
         rds_mysql_conn_props = _glue.CfnConnection.ConnectionInputProperty(
             connection_type="JDBC",
             description="Glue Connection for RDS MySQL Store Events Database",
